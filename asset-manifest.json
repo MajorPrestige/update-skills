@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/static/js/main.e603cff4.js",
-    "index.html": "/index.html",
-    "main.e603cff4.js.map": "/static/js/main.e603cff4.js.map"
+    "main.js": "/update-skills/static/js/main.e603cff4.js",
+    "index.html": "/update-skills/index.html",
+    "main.e603cff4.js.map": "/update-skills/static/js/main.e603cff4.js.map"
   },
   "entrypoints": [
     "static/js/main.e603cff4.js"
