@@ -1,10 +1,14 @@
 {
   "files": {
-    "main.js": "/update-skills/static/js/main.e603cff4.js",
+    "main.js": "/update-skills/static/js/main.86364af3.js",
+    "static/js/504.f2baec69.chunk.js": "/update-skills/static/js/504.f2baec69.chunk.js",
+    "static/js/131.30c4474d.chunk.js": "/update-skills/static/js/131.30c4474d.chunk.js",
     "index.html": "/update-skills/index.html",
-    "main.e603cff4.js.map": "/update-skills/static/js/main.e603cff4.js.map"
+    "main.86364af3.js.map": "/update-skills/static/js/main.86364af3.js.map",
+    "504.f2baec69.chunk.js.map": "/update-skills/static/js/504.f2baec69.chunk.js.map",
+    "131.30c4474d.chunk.js.map": "/update-skills/static/js/131.30c4474d.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.e603cff4.js"
+    "static/js/main.86364af3.js"
   ]
 }
