@@ -61,9 +61,11 @@
 
   @include mixins.mq('mobile') {
     width: 360px;
+    height: 250px;
   }
 
   @include mixins.mq('tablet') {
     width: 440px;
+    height: 306px
   }
 }

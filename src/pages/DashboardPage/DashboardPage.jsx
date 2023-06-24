@@ -8,7 +8,7 @@ const DashboardPage = () => {
     <div className={s.colorContainer}>
       <div className={`${s.container} container`}>
         <h1 className={s.title}>Welcome to Dashboard!</h1>
-        <img className={s.img} src={img} alt="dashboard img" />
+        <img width="280" height="195" className={s.img} src={img} alt="dashboard img" />
         <p className={s.text}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, autem, eum
           laborum est neque ab non dicta totam quis voluptates, reiciendis mollitia
