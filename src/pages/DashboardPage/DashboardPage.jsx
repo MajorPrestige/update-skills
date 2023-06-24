@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+
+import img from 'images/dashboard.png'
 import s from './DashboardPage.module.scss';
 
 const DashboardPage = () => {
@@ -6,7 +8,7 @@ const DashboardPage = () => {
     <div className={s.colorContainer}>
       <div className={`${s.container} container`}>
         <h1 className={s.title}>Welcome to Dashboard!</h1>
-        <img src="" alt="dashboard img" />
+        <img className={s.img} src={img} alt="dashboard img" />
         <p className={s.text}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, autem, eum
           laborum est neque ab non dicta totam quis voluptates, reiciendis mollitia

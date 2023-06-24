@@ -1,0 +1,6 @@
+@use '../../styles/mixins';
+
+.colorContainer {
+  width: 100%;
+  min-height: calc(100vh - 88px);
+}

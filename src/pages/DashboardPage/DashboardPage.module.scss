@@ -1,9 +1,8 @@
-@import '../../styles/mixins';
+@use '../../styles/mixins';
 
 .colorContainer {
   width: 100%;
   min-height: calc(100vh - 88px);
-  background: #5736a3;
 }
 
 .container {
@@ -14,6 +13,8 @@
 }
 
 .title {
+  margin-top: 20px;
+  margin-bottom: 20px;
   text-align: center;
   font-size: 32px;
   color: #ebd8ff;
@@ -30,7 +31,7 @@
 }
 
 .link {
-  margin-top: 20px;
+  margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -46,5 +47,23 @@
 
   &:hover {
     background-color: #5cd3a8;
+  }
+}
+
+.img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mixins.mq('mobile-only') {
+    width: 280px;
+  }
+
+  @include mixins.mq('mobile') {
+    width: 360px;
+  }
+
+  @include mixins.mq('tablet') {
+    width: 440px;
   }
 }
