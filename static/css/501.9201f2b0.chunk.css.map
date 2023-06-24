@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/501.9201f2b0.chunk.css","mappings":"AAEA,kCAEE,8BADA,UACA","sources":["pages/TweetsPage/TweetsPage.module.scss"],"sourcesContent":["@use '../../styles/mixins';\n\n.colorContainer {\n  width: 100%;\n  min-height: calc(100vh - 88px);\n}\n"],"names":[],"sourceRoot":""}
