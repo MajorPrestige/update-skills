@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/131.30c4474d.chunk.js","mappings":"sIAMA,UANsB,WACpB,OACEA,EAAAA,EAAAA,KAAA,OAAAC,SAAK,iBAET,C","sources":["pages/DashboardPage/DashboardPage.jsx"],"sourcesContent":["const DashboardPage = () => {\n  return (\n    <div>DashboardPage</div>\n  );\n}\n\nexport default DashboardPage;"],"names":["_jsx","children"],"sourceRoot":""}
