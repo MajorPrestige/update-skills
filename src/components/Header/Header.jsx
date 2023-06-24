@@ -10,12 +10,14 @@ const Header = () => {
   return (
     <div className={s.header}>
       <div className="container">
-        <NavLink className={getClassName} to="/">
-          Dashboard
-        </NavLink>
-        <NavLink className={getClassName} to="/tweets">
-          Tweets
-        </NavLink>
+        <div className={s.header__container}>
+          <NavLink className={getClassName} to="/">
+            Dashboard
+          </NavLink>
+          <NavLink className={getClassName} to="/tweets">
+            Tweets
+          </NavLink>
+        </div>
       </div>
     </div>
   );
