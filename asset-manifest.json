@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/update-skills/static/css/main.fdf14300.css",
-    "main.js": "/update-skills/static/js/main.630092d4.js",
+    "main.js": "/update-skills/static/js/main.0eeffad1.js",
     "static/js/504.f2baec69.chunk.js": "/update-skills/static/js/504.f2baec69.chunk.js",
-    "static/css/87.9d771f1d.chunk.css": "/update-skills/static/css/87.9d771f1d.chunk.css",
-    "static/js/87.ce27de77.chunk.js": "/update-skills/static/js/87.ce27de77.chunk.js",
+    "static/css/87.eebd0d6c.chunk.css": "/update-skills/static/css/87.eebd0d6c.chunk.css",
+    "static/js/87.f95bccb8.chunk.js": "/update-skills/static/js/87.f95bccb8.chunk.js",
     "index.html": "/update-skills/index.html",
     "main.fdf14300.css.map": "/update-skills/static/css/main.fdf14300.css.map",
-    "main.630092d4.js.map": "/update-skills/static/js/main.630092d4.js.map",
+    "main.0eeffad1.js.map": "/update-skills/static/js/main.0eeffad1.js.map",
     "504.f2baec69.chunk.js.map": "/update-skills/static/js/504.f2baec69.chunk.js.map",
-    "87.9d771f1d.chunk.css.map": "/update-skills/static/css/87.9d771f1d.chunk.css.map",
-    "87.ce27de77.chunk.js.map": "/update-skills/static/js/87.ce27de77.chunk.js.map"
+    "87.eebd0d6c.chunk.css.map": "/update-skills/static/css/87.eebd0d6c.chunk.css.map",
+    "87.f95bccb8.chunk.js.map": "/update-skills/static/js/87.f95bccb8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fdf14300.css",
-    "static/js/main.630092d4.js"
+    "static/js/main.0eeffad1.js"
   ]
 }
