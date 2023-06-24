@@ -1,0 +1,50 @@
+@import '../../styles/mixins';
+
+.colorContainer {
+  width: 100%;
+  min-height: calc(100vh - 88px);
+  background: #5736a3;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  color: #ebd8ff;
+}
+
+.text { 
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #ebd8ff;
+}
+
+.link {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  min-width: 196px;
+  padding: 14px 28px;
+  border-radius: 10px;
+  background: #ebd8ff;
+  color: #373737;
+  box-shadow: 0px 3.4369285106658936px 3.4369285106658936px 0px rgba(0, 0, 0, 0.25);
+
+  @include mq(mobile-only) {
+    min-width: 140px;
+  }
+}
