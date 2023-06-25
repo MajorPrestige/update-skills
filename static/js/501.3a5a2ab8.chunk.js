@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkupdate_skills=self.webpackChunkupdate_skills||[]).push([[501],{501:function(n,e,a){a.r(e),a.d(e,{default:function(){return r}});var c={colorContainer:"TweetsPage_colorContainer__4IJcF"},t=a(184),r=function(){return(0,t.jsx)("div",{className:c.colorContainer,children:(0,t.jsx)("div",{className:"".concat(c.container," container")})})}}}]);
-//# sourceMappingURL=501.3a5a2ab8.chunk.js.map

@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/update-skills/static/css/main.3389af48.css",
-    "main.js": "/update-skills/static/js/main.f5883e34.js",
-    "static/css/501.9201f2b0.chunk.css": "/update-skills/static/css/501.9201f2b0.chunk.css",
-    "static/js/501.3a5a2ab8.chunk.js": "/update-skills/static/js/501.3a5a2ab8.chunk.js",
+    "main.css": "/update-skills/static/css/main.143f052b.css",
+    "main.js": "/update-skills/static/js/main.668672f1.js",
+    "static/css/556.9225a450.chunk.css": "/update-skills/static/css/556.9225a450.chunk.css",
+    "static/js/556.c9f52032.chunk.js": "/update-skills/static/js/556.c9f52032.chunk.js",
     "static/css/73.3a371d25.chunk.css": "/update-skills/static/css/73.3a371d25.chunk.css",
     "static/js/73.3556c470.chunk.js": "/update-skills/static/js/73.3556c470.chunk.js",
     "static/media/dashboard.png": "/update-skills/static/media/dashboard.e2f42234fd0bf4ef382d.png",
+    "static/media/card@2x.png": "/update-skills/static/media/card@2x.545b0e444f5568dade94.png",
+    "static/media/card.png": "/update-skills/static/media/card.2cfaf72cf1b8694dd508.png",
+    "static/media/avatar@2x.png": "/update-skills/static/media/avatar@2x.b80c6e96e0094e37a691.png",
     "index.html": "/update-skills/index.html",
-    "main.3389af48.css.map": "/update-skills/static/css/main.3389af48.css.map",
-    "main.f5883e34.js.map": "/update-skills/static/js/main.f5883e34.js.map",
-    "501.9201f2b0.chunk.css.map": "/update-skills/static/css/501.9201f2b0.chunk.css.map",
-    "501.3a5a2ab8.chunk.js.map": "/update-skills/static/js/501.3a5a2ab8.chunk.js.map",
+    "main.143f052b.css.map": "/update-skills/static/css/main.143f052b.css.map",
+    "main.668672f1.js.map": "/update-skills/static/js/main.668672f1.js.map",
+    "556.9225a450.chunk.css.map": "/update-skills/static/css/556.9225a450.chunk.css.map",
+    "556.c9f52032.chunk.js.map": "/update-skills/static/js/556.c9f52032.chunk.js.map",
     "73.3a371d25.chunk.css.map": "/update-skills/static/css/73.3a371d25.chunk.css.map",
     "73.3556c470.chunk.js.map": "/update-skills/static/js/73.3556c470.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3389af48.css",
-    "static/js/main.f5883e34.js"
+    "static/css/main.143f052b.css",
+    "static/js/main.668672f1.js"
   ]
 }
