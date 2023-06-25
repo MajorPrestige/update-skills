@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Card from '../../images/card.png';
 import Card2x from '../../images/card@2x.png';
 import Avatar from '../../images/avatar.png';
@@ -5,7 +7,15 @@ import Avatar2x from '../../images/avatar@2x.png';
 
 import s from './TweetCard.module.scss';
 
+const toggleClassName = (conditions) => {
+  return conditions ? `${s.btn} ${s.active}` : s.btn;
+};
+
 const TweetCard = () => {
+  const [btnCheck, setBtnCheck] = useState(false);
+
+  console.log(btnCheck);
+
   return (
     <div className={s.card}>
       <picture>
@@ -23,8 +33,12 @@ const TweetCard = () => {
         <p className={s.folowers}>
           <span className={s.number}>100500</span> FOLLOWERS
         </p>
-        <button className={s.btn} type="button">
-          Follow
+        <button
+          onClick={() => setBtnCheck(!btnCheck)}
+          className={toggleClassName(btnCheck)}
+          type="button"
+        >
+          {btnCheck ? 'Following' : 'Follow'}
         </button>
       </div>
     </div>
