@@ -17,9 +17,11 @@ const TweetCard = () => {
           <source srcSet={Avatar2x} media="(min-resolution: 2dppx)" />
           <img height="62" width="62" className={s.ava} src={Avatar} alt="avatar" />
         </picture>
-        <p className={s.tweets}>777 TWEETS</p>
-        <p>
-          <span className={s.tweets__number}>100500</span> FOLLOWERS
+        <p className={s.tweets}>
+          <span className={s.number}>777</span> TWEETS
+        </p>
+        <p className={s.folowers}>
+          <span className={s.number}>100500</span> FOLLOWERS
         </p>
         <button className={s.btn} type="button">
           Follow
