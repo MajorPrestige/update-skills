@@ -14,7 +14,7 @@ const toggleClassName = (conditions) => {
 const TweetCard = () => {
   const [btnCheck, setBtnCheck] = useState(false);
 
-  console.log(btnCheck);
+  const handleFormatingNumber = (number) => number.toLocaleString();
 
   return (
     <div className={s.card}>
@@ -28,10 +28,10 @@ const TweetCard = () => {
           <img height="62" width="62" className={s.ava} src={Avatar} alt="avatar" />
         </picture>
         <p className={s.tweets}>
-          <span className={s.number}>777</span> TWEETS
+          <span className={s.number}>{handleFormatingNumber(7777)}</span> TWEETS
         </p>
         <p className={s.folowers}>
-          <span className={s.number}>100500</span> FOLLOWERS
+          <span className={s.number}>{handleFormatingNumber(100500)}</span> FOLLOWERS
         </p>
         <button
           onClick={() => setBtnCheck(!btnCheck)}
