@@ -62,7 +62,8 @@
   margin-top: 26px;
   transition: all 100ms ease-in-out;
 
-  &:hover {
+  &:hover,
+  &:focus {
     transform: scale(1.05);
   }
 }

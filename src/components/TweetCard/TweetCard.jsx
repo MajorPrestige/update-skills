@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 import Card from '../../images/card.png';
 import Card2x from '../../images/card@2x.png';
@@ -13,8 +13,14 @@ const toggleClassName = (conditions) => {
 
 const TweetCard = () => {
   const [btnCheck, setBtnCheck] = useState(false);
+  const buttonRef = useRef(null);
 
   const handleFormatingNumber = (number) => number.toLocaleString();
+
+  const handleBtnClick = () => {
+    setBtnCheck(!btnCheck);
+    buttonRef.current.blur();
+  };
 
   return (
     <div className={s.card}>
@@ -34,7 +40,8 @@ const TweetCard = () => {
           <span className={s.number}>{handleFormatingNumber(100500)}</span> FOLLOWERS
         </p>
         <button
-          onClick={() => setBtnCheck(!btnCheck)}
+          onClick={handleBtnClick}
+          ref={buttonRef}
           className={toggleClassName(btnCheck)}
           type="button"
         >
