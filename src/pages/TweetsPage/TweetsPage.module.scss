@@ -10,6 +10,7 @@
   margin: 0 auto;
   padding-right: 10px;
   padding-left: 10px;
+  padding-bottom: 20px;
 
   @include mixins.mq(mobile) {
     width: 480px;
