@@ -4,7 +4,7 @@ import s from './TweetsPage.module.scss';
 const TweetsPage = () => {
   return (
     <div className={s.colorContainer}>
-      <div className={`${s.container} container`}>
+      <div className={s.container}>
         <TweetList />
       </div>
     </div>

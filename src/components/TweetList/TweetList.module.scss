@@ -1,0 +1,16 @@
+@use '../../styles/mixins';
+
+.list {
+  display: grid;
+  gap: 20px;
+
+  @include mixins.mq('tablet') {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  @include mixins.mq('desktop') {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
