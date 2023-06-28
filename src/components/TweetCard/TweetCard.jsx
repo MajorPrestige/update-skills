@@ -1,9 +1,8 @@
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
+import useLocalStorage from 'use-local-storage';
 
 import Card from '../../images/card.png';
 import Card2x from '../../images/card@2x.png';
-import Avatar from '../../images/avatar.png';
-import Avatar2x from '../../images/avatar@2x.png';
 
 import s from './TweetCard.module.scss';
 
@@ -11,11 +10,17 @@ const toggleClassName = (conditions) => {
   return conditions ? `${s.btn} ${s.active}` : s.btn;
 };
 
-const TweetCard = () => {
-  const [btnCheck, setBtnCheck] = useState(false);
+const TweetCard = ({ user, avatar, followers, tweets }) => {
+  const [btnCheck, setBtnCheck] = useLocalStorage(false);
   const buttonRef = useRef(null);
 
-  const handleFormatingNumber = (number) => number.toLocaleString();
+  const handleFormatingFollowers = (number) => {
+    if (btnCheck) {
+      return (number + 1).toLocaleString();
+    }
+
+    return number.toLocaleString();
+  };
 
   const handleBtnClick = () => {
     setBtnCheck(!btnCheck);
@@ -23,21 +28,20 @@ const TweetCard = () => {
   };
 
   return (
-    <div className={s.card}>
+    <li className={s.card}>
       <picture>
         <source srcSet={Card2x} media="(min-resolution: 2dppx)" />
         <img className={s.img} src={Card} alt="card chat" />
       </picture>
       <div className={s.info}>
-        <picture className={s.imgWrapper}>
-          <source srcSet={Avatar2x} media="(min-resolution: 2dppx)" />
-          <img height="62" width="62" className={s.ava} src={Avatar} alt="avatar" />
-        </picture>
+        <div className={s.imgWrapper}>
+          <img height="62" width="62" className={s.ava} src={avatar} alt={user} />
+        </div>
         <p className={s.tweets}>
-          <span className={s.number}>{handleFormatingNumber(7777)}</span> TWEETS
+          <span className={s.number}>{tweets.toLocaleString()}</span> TWEETS
         </p>
         <p className={s.folowers}>
-          <span className={s.number}>{handleFormatingNumber(100500)}</span> FOLLOWERS
+          <span className={s.number}>{handleFormatingFollowers(followers)}</span> FOLLOWERS
         </p>
         <button
           onClick={handleBtnClick}
@@ -48,7 +52,7 @@ const TweetCard = () => {
           {btnCheck ? 'Following' : 'Follow'}
         </button>
       </div>
-    </div>
+    </li>
   );
 };
 

@@ -1,11 +1,11 @@
-import TweetCard from 'components/TweetCard/TweetCard';
+import TweetList from 'components/TweetList/TweetList';
 import s from './TweetsPage.module.scss';
 
 const TweetsPage = () => {
   return (
     <div className={s.colorContainer}>
       <div className={`${s.container} container`}>
-        <TweetCard />
+        <TweetList />
       </div>
     </div>
   );
