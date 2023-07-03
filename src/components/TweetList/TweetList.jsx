@@ -1,13 +1,22 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
+import { axiosGetUsers } from 'api/users';
 import TweetCard from 'components/TweetCard/TweetCard';
-import usersDb from 'database/users.json';
 
 import s from './TweetList.module.scss';
 
 const TweetList = () => {
-  const [users] = useState(usersDb);
+  const [users, setUsers] = useState([]);
   const [displayedUsers, setDisplayedUsers] = useState(12);
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      const result = await axiosGetUsers();
+      setUsers(result);
+    };
+
+    fetchUsers();
+  }, []);
 
   const loadMoreUsers = () => {
     setDisplayedUsers((prevCount) => prevCount + 12);
