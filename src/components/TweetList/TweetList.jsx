@@ -12,7 +12,11 @@ const TweetList = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    axiosGetUsers().then((data) => setUsers(data));
+    setLoading(true);
+    axiosGetUsers()
+      .then((data) => setUsers(data))
+      .catch((err) => console.log(err))
+      .finally(() => setLoading(false));
   }, []);
 
   const updateUsers = async () => {
