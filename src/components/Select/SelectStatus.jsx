@@ -7,10 +7,8 @@ const SelectStatus = ({ handleInputChange, options, value }) => {
     <Select
       options={options}
       className={s.select}
-      // defaultValue={options[0]}
       onChange={handleInputChange}
       value={value()}
-      // classNamePrefix={'react-select'}
     />
   );
 };
