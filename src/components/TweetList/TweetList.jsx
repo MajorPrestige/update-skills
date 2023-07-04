@@ -60,6 +60,7 @@ const TweetList = () => {
             updateUsers={updateUsers}
             loading={loading}
             setLoading={setLoading}
+            filter={filter}
           />
         ))}
       </ul>
