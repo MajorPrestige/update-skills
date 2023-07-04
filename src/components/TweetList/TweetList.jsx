@@ -10,13 +10,13 @@ const TweetList = () => {
   const [displayedUsers, setDisplayedUsers] = useState(12);
 
   useEffect(() => {
-    const fetchUsers = async () => {
-      const result = await axiosGetUsers();
-      setUsers(result);
-    };
-
-    fetchUsers();
+    axiosGetUsers().then((data) => setUsers(data));
   }, []);
+
+  const updateUsers = async () => {
+    const result = await axiosGetUsers();
+    setUsers(result);
+  };
 
   const loadMoreUsers = () => {
     setDisplayedUsers((prevCount) => prevCount + 12);
@@ -32,6 +32,8 @@ const TweetList = () => {
             avatar={user.avatar}
             followers={user.followers}
             tweets={user.tweets}
+            currentUser={users[user.id - 1]}
+            updateUsers={updateUsers}
           />
         ))}
       </ul>
