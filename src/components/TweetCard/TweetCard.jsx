@@ -18,6 +18,7 @@ const TweetCard = ({
   tweets,
   currentUser,
   updateUsers,
+  setLoading,
 }) => {
   const [following, setFollowing] = useLocalStorage(
     `following_${currentUser.id}`,
@@ -31,15 +32,19 @@ const TweetCard = ({
 
   const handleBtnClick = () => {
     if (!following) {
+      setLoading(true);
       axiosUpdateFollowers({ ...currentUser, followers: currentUser.followers + 1 })
         .then(() => updateUsers())
-        .catch((err) => console.log(err));
+        .catch((err) => console.log(err))
+        .finally(() => setLoading(false));
     }
 
     if (following) {
+      setLoading(true);
       axiosUpdateFollowers({ ...currentUser, followers: currentUser.followers - 1 })
         .then(() => updateUsers())
-        .catch((err) => console.log(err));
+        .catch((err) => console.log(err))
+        .finally(() => setLoading(false));
     }
 
     setFollowing(!following);
@@ -47,32 +52,34 @@ const TweetCard = ({
   };
 
   return (
-    <li className={s.card}>
-      <picture>
-        <source srcSet={Card2x} media="(min-resolution: 2dppx)" />
-        <img className={s.img} src={Card} alt="card chat" />
-      </picture>
-      <div className={s.info}>
-        <div className={s.imgWrapper}>
-          <img height="62" width="62" className={s.ava} src={avatar} alt={name} />
+    <>
+      <li className={s.card}>
+        <picture>
+          <source srcSet={Card2x} media="(min-resolution: 2dppx)" />
+          <img className={s.img} src={Card} alt="card chat" />
+        </picture>
+        <div className={s.info}>
+          <div className={s.imgWrapper}>
+            <img height="62" width="62" className={s.ava} src={avatar} alt={name} />
+          </div>
+          <p className={s.tweets}>
+            <span className={s.number}>{tweets.toLocaleString()}</span> TWEETS
+          </p>
+          <p className={s.folowers}>
+            <span className={s.number}>{handleFormatingFollowers(followers)}</span>{' '}
+            FOLLOWERS
+          </p>
+          <button
+            onClick={handleBtnClick}
+            ref={buttonRef}
+            className={toggleClassName(following)}
+            type="button"
+          >
+            {following ? 'Following' : 'Follow'}
+          </button>
         </div>
-        <p className={s.tweets}>
-          <span className={s.number}>{tweets.toLocaleString()}</span> TWEETS
-        </p>
-        <p className={s.folowers}>
-          <span className={s.number}>{handleFormatingFollowers(followers)}</span>{' '}
-          FOLLOWERS
-        </p>
-        <button
-          onClick={handleBtnClick}
-          ref={buttonRef}
-          className={toggleClassName(following)}
-          type="button"
-        >
-          {following ? 'Following' : 'Follow'}
-        </button>
-      </div>
-    </li>
+      </li>
+    </>
   );
 };
 

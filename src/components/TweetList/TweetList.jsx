@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react';
 
 import { axiosGetUsers } from 'api/users';
 import TweetCard from 'components/TweetCard/TweetCard';
+import Loader from 'components/Loader/Loader';
 
 import s from './TweetList.module.scss';
 
 const TweetList = () => {
   const [users, setUsers] = useState([]);
   const [displayedUsers, setDisplayedUsers] = useState(12);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     axiosGetUsers().then((data) => setUsers(data));
@@ -24,6 +26,7 @@ const TweetList = () => {
 
   return (
     <>
+      {loading && <Loader />}
       <ul className={s.list}>
         {users.slice(0, displayedUsers).map((user) => (
           <TweetCard
@@ -34,6 +37,8 @@ const TweetList = () => {
             tweets={user.tweets}
             currentUser={users[user.id - 1]}
             updateUsers={updateUsers}
+            loading={loading}
+            setLoading={setLoading}
           />
         ))}
       </ul>
