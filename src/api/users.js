@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://localhost:4000/api/';
+// axios.defaults.baseURL = 'http://localhost:4000/api/';
+axios.defaults.baseURL = 'https://json-server-qp0p.onrender.com/api/';
 
 export const axiosGetUsers = async () => {
   const { data } = await axios.get('/users');

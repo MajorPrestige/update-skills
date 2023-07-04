@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import useLocalStorage from 'use-local-storage';
 
-import { axiosUpdateFollowers} from 'api/users';
+import { axiosUpdateFollowers } from 'api/users';
 import Card from '../../images/card.png';
 import Card2x from '../../images/card@2x.png';
 
@@ -11,7 +11,14 @@ const toggleClassName = (conditions) => {
   return conditions ? `${s.btn} ${s.active}` : s.btn;
 };
 
-const TweetCard = ({ name, avatar, followers, tweets, currentUser, updateUsers }) => {
+const TweetCard = ({
+  name,
+  avatar,
+  followers,
+  tweets,
+  currentUser,
+  updateUsers,
+}) => {
   const [following, setFollowing] = useLocalStorage(
     `following_${currentUser.id}`,
     false
@@ -23,20 +30,20 @@ const TweetCard = ({ name, avatar, followers, tweets, currentUser, updateUsers }
   };
 
   const handleBtnClick = () => {
-    // const fetchUpdateFollowers = async (user) => {
-    //   await axiosUpdateFollowers(user);
-    // };
     if (!following) {
-      axiosUpdateFollowers({ ...currentUser, followers: currentUser.followers + 1 });
+      axiosUpdateFollowers({ ...currentUser, followers: currentUser.followers + 1 })
+        .then(() => updateUsers())
+        .catch((err) => console.log(err));
     }
 
     if (following) {
-      axiosUpdateFollowers({ ...currentUser, followers: currentUser.followers - 1 });
+      axiosUpdateFollowers({ ...currentUser, followers: currentUser.followers - 1 })
+        .then(() => updateUsers())
+        .catch((err) => console.log(err));
     }
 
     setFollowing(!following);
     buttonRef.current.blur();
-    updateUsers();
   };
 
   return (
